@@ -11,12 +11,12 @@ New-LocalGroup -Name "GrupoUsuario"
 ### 🔹 Paso 3: Crear los usuarios
 ```powershell
 # Usuario con permisos de administrador
-New-LocalUser -Name "AdminUser" -Password (Read-Host -AsSecureString "Introduce una contraseña") -FullName "Usuario Administrador"
+New-LocalUser -Name "AdminUser" -Password (Read-Host -AsSecureString "Introduce una contraseña")
 Add-LocalGroupMember -Group "Administradores" -Member "AdminUser"
 Add-LocalGroupMember -Group "GrupoAdmin" -Member "AdminUser"
 
 # Usuario sin permisos de administrador
-New-LocalUser -Name "NormalUser" -Password (Read-Host -AsSecureString "Introduce una contraseña") -FullName "Usuario Normal"
+New-LocalUser -Name "NormalUser" -Password (Read-Host -AsSecureString "Introduce una contraseña")
 Add-LocalGroupMember -Group "GrupoUsuario" -Member "NormalUser"
 ```
 
