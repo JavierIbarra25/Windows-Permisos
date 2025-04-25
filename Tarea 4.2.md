@@ -1,14 +1,14 @@
 ## ✅ 1. Crear usuarios y grupos
 
-###🔹 Paso 1: Abrir PowerShell como Administrador
+### 🔹 Paso 1: Abrir PowerShell como Administrador
 Presiona Win + X → selecciona Windows PowerShell (Admin) o Terminal (Admin).
 
-###🔹 Paso 2: Crear los grupos
+### 🔹 Paso 2: Crear los grupos
 ```powershell
 New-LocalGroup -Name "GrupoAdmin"
 New-LocalGroup -Name "GrupoUsuario"
 ```
-###🔹 Paso 3: Crear los usuarios
+### 🔹 Paso 3: Crear los usuarios
 ```powershell
 # Usuario con permisos de administrador
 New-LocalUser -Name "AdminUser" -Password (Read-Host -AsSecureString "Introduce una contraseña") -FullName "Usuario Administrador"
@@ -21,12 +21,12 @@ Add-LocalGroupMember -Group "GrupoUsuario" -Member "NormalUser"
 ```
 
 ## ✅ 2. Permisos sobre carpetas
-###🔹 Paso 1: Crear las carpetas
+### 🔹 Paso 1: Crear las carpetas
 ```powershell
 New-Item -ItemType Directory -Path "C:\CarpetaAdmin"
 New-Item -ItemType Directory -Path "C:\CarpetaUsuario"
 ```
-###🔹 Paso 2: Asignar permisos a cada carpeta
+### 🔹 Paso 2: Asignar permisos a cada carpeta
 ```powershell
 # Quitar permisos heredados y dar control total solo al usuario correspondiente
 
