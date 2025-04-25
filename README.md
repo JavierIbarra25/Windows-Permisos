@@ -99,7 +99,7 @@ New-Item -ItemType Directory -Path "C:\CarpetaUsuario"
 ### 🔹 Paso 2: Modificar los permisos de las carpetas
 Queremos que **solo el usuario correspondiente** pueda entrar en su carpeta.
 
-🔍**¿Por qué usamos `icacls`?**
+🔍 **¿Por qué usamos `icacls`?**
 `icacls` es un comando que sirve para **ver y cambiar los permisos de archivos y carpetas en Windows**.
 
 ---
